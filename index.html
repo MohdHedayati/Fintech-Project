@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script> <!-- Added 'defer' to ensure it loads after DOM -->
+    <title>Creditworthiness Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <h1>Creditworthiness Assessment</h1>
+    <form id="creditForm">
+        <label for="income">Annual Income (in USD):</label>
+        <input type="number" id="income" name="income" required>
+
+        <label for="employment">Employment Status:</label>
+        <select id="employment" name="employment" required>
+            <option value="">Select...</option>
+            <option value="full_time">Full-time</option>
+            <option value="part_time">Part-time</option>
+            <option value="self_employed">Self-employed</option>
+            <option value="unemployed">Unemployed</option>
+            <option value="student">Student</option>
+        </select>
+
+        <label for="monthly_expenses">Monthly Expenses (in USD):</label>
+        <input type="number" id="monthly_expenses" name="monthly_expenses" required>
+
+        <label for="existing_loans">Do you have any existing loans?</label>
+        <select id="existing_loans" name="existing_loans" required>
+            <option value="">Select...</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <label for="credit_score">Credit Score (if known):</label>
+        <input type="number" id="credit_score" name="credit_score" placeholder="Optional">
+
+        <label for="loan_amount">Desired Loan Amount (in USD):</label>
+        <input type="number" id="loan_amount" name="loan_amount" required>
+
+        <button type="button" onclick="assessCreditworthiness()">Assess Creditworthiness</button>
+    </form>
+
+    <div id="result" style="margin-top: 20px; text-align: center;"></div>
+</div>
+
+</body>
+</html>
